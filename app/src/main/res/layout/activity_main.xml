@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/vOuter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dimen25sp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivPerson"
+        style="@style/customImageView"
+        android:layout_marginTop="@dimen/dimen25sp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vOuter" />
+
+    <TextView
+        android:id="@+id/tvHeading"
+        style="@style/customTextView"
+        android:text="@string/heading"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPerson" />
+
+    <View
+        android:id="@+id/vInner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dimen20sp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="@+id/vOuter"
+        app:layout_constraintEnd_toEndOf="@+id/vOuter"
+        app:layout_constraintStart_toStartOf="@+id/vOuter"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeading" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/customTextView"
+        android:layout_marginTop="29sp"
+        android:text="@string/Tvtitle"
+        android:textSize="@dimen/dimen15sp"
+        app:layout_constraintEnd_toStartOf="@id/guideverti1"
+        app:layout_constraintStart_toStartOf="@+id/vInner"
+        app:layout_constraintTop_toTopOf="@+id/vInner" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideverti1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="176dp" />
+
+    <Button
+        android:id="@+id/btnSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen40sp"
+        android:layout_marginTop="@dimen/dimen20sp"
+        android:backgroundTint="#808080"
+        android:text="@string/tvSelect"
+        android:textSize="@dimen/dimen15sp"
+        app:layout_constraintEnd_toEndOf="@id/vInner"
+        app:layout_constraintStart_toEndOf="@id/guideverti1"
+        app:layout_constraintTop_toTopOf="@id/vInner" />
+
+    <TextView
+        android:id="@+id/tvFirstname"
+        style="@style/customTextView"
+        android:layout_marginTop="26sp"
+        android:text="@string/TvFirstName"
+        android:textSize="@dimen/dimen15sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideverti1"
+        app:layout_constraintStart_toStartOf="@id/vInner"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <EditText
+        android:id="@+id/etPerson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen15sp"
+        android:layout_marginTop="@dimen/dimen15sp"
+        android:background="@drawable/rectangleborder"
+        android:gravity="center"
+        android:hint="@string/EtJonathan"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/dimen15sp"
+        app:layout_constraintEnd_toEndOf="@id/vInner"
+        app:layout_constraintStart_toEndOf="@id/guideverti1"
+        app:layout_constraintTop_toBottomOf="@id/btnSelect" />
+
+    <TextView
+        android:id="@+id/tvLastname"
+        style="@style/customTextView"
+        android:layout_marginTop="28sp"
+        android:text="@string/TvLastname"
+        android:textSize="@dimen/dimen15sp"
+        app:layout_constraintEnd_toStartOf="@id/guideverti1"
+        app:layout_constraintStart_toStartOf="@id/vInner"
+        app:layout_constraintTop_toBottomOf="@id/tvFirstname" />
+
+    <EditText
+        android:id="@+id/etLastname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen15sp"
+        android:layout_marginTop="@dimen/dimen20sp"
+        android:background="@drawable/rectangleborder"
+        android:gravity="center"
+        android:hint="@string/EtDoe"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/dimen15sp"
+        app:layout_constraintEnd_toEndOf="@id/vInner"
+        app:layout_constraintStart_toEndOf="@id/guideverti1"
+        app:layout_constraintTop_toBottomOf="@id/etPerson" />
+
+    <TextView
+        android:id="@+id/tvWorkmail"
+        style="@style/customTextView"
+        android:layout_marginTop="@dimen/dimen25sp"
+        android:text="@string/TvWorkmail"
+        android:textSize="@dimen/dimen15sp"
+        app:layout_constraintEnd_toStartOf="@id/guideverti1"
+        app:layout_constraintStart_toStartOf="@id/vInner"
+        app:layout_constraintTop_toBottomOf="@id/tvLastname" />
+
+    <EditText
+        android:id="@+id/etWorkmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen15sp"
+        android:layout_marginTop="@dimen/dimen20sp"
+        android:background="@drawable/rectangleborder"
+        android:gravity="center"
+        android:hint="@string/EtWorkemail"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/dimen15sp"
+        app:layout_constraintEnd_toEndOf="@id/vInner"
+        app:layout_constraintStart_toEndOf="@id/guideverti1"
+        app:layout_constraintTop_toBottomOf="@id/etLastname" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

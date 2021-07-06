@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">1July_Resources_You</string>
+    <string name="heading">Add New Employee</string>
+    <string name="Tvtitle">Title</string>
+    <string name="TvFirstName">First Name</string>
+    <string name="TvLastname">Last Name</string>
+    <string name="TvWorkmail">Work Mail</string>
+    <string name="tvSelect">Select option</string>
+    <string name="EtJonathan">Jonathan</string>
+    <string name="EtDoe">Doe</string>
+    <string name="EtWorkemail">jonathan@cakehr.com</string>
+</resources>
